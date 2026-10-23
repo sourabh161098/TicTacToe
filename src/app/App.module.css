@@ -1,0 +1,55 @@
+.app {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-lg);
+  padding: var(--space-md);
+}
+
+.title {
+  position: relative;
+  padding-bottom: 0.35em;
+  font-size: clamp(2rem, 8vw, 3.5rem);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: 0.12em;
+  /* Balances the trailing letter-spacing so text and underline stay centered */
+  padding-left: 0.12em;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* Gradient underline running from the X color to the O color */
+.title::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 40%;
+  height: 4px;
+  transform: translateX(-50%);
+  border-radius: 999px;
+  background: var(--gradient-players);
+}
+
+.tic {
+  color: var(--color-player-x);
+  text-shadow: 0 0 24px rgb(255 92 138 / 0.45);
+}
+
+/* Gradient bridges the X and O colors, matching the underline */
+.tac {
+  background: var(--gradient-players);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  /* text-shadow would show through transparent text, so glow via filter instead */
+  filter: drop-shadow(0 0 12px rgb(108 140 255 / 0.45));
+}
+
+.toe {
+  color: var(--color-player-o);
+  text-shadow: 0 0 24px rgb(61 220 255 / 0.45);
+}

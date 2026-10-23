@@ -1,0 +1,18 @@
+.board {
+  /* Lets squares size their text relative to the board width */
+  container-type: inline-size;
+
+  display: grid;
+  /* --board-size is set from BOARD_SIZE in Board.jsx */
+  grid-template-columns: repeat(var(--board-size), 1fr);
+  gap: clamp(0.4rem, 2vw, 0.75rem);
+
+  /* Square board that fits both narrow phones and short landscape screens */
+  width: min(90vw, 65dvh, 480px);
+  aspect-ratio: 1;
+
+  padding: clamp(0.4rem, 2vw, 0.75rem);
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}

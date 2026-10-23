@@ -1,0 +1,44 @@
+/*
+ * Design tokens. Dark is the default theme.
+ * To add a light theme later, define the same variables under
+ * [data-theme='light'] and toggle the attribute on <html>.
+ */
+:root,
+[data-theme='dark'] {
+  color-scheme: dark;
+
+  --color-bg: #0f1115;
+  --color-surface: #1a1d24;
+  --color-surface-hover: #232733;
+  --color-border: #2c313c;
+  --color-text: #e6e8ee;
+  --color-text-muted: #9aa1b1;
+  --color-accent: #6c8cff;
+
+  /* Player colors, shared by the title and (later) the X / O marks */
+  --color-player-x: #ff5c8a;
+  --color-player-o: #3ddcff;
+  --gradient-players: linear-gradient(90deg, var(--color-player-x), var(--color-player-o));
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 2rem;
+
+  --font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --transition-fast: 150ms ease;
+}
+
+/* Blending in OKLCH keeps the gradient midpoint vivid instead of grayish */
+@supports (background: linear-gradient(in oklch 90deg, red, blue)) {
+  :root,
+  [data-theme='dark'] {
+    --gradient-players: linear-gradient(
+      in oklch 90deg,
+      var(--color-player-x),
+      var(--color-player-o)
+    );
+  }
+}
