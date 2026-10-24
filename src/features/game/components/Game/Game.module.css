@@ -3,4 +3,6 @@
   flex-direction: column;
   align-items: center;
   gap: var(--space-md);
+  /* Every child stretches to this width, so everything lines up with the board */
+  width: var(--board-width);
 }

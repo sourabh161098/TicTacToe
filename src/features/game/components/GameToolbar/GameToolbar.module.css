@@ -3,8 +3,7 @@
   align-items: center;
   justify-content: space-between;
   gap: var(--space-md);
-  /* Matches the board width so both line up */
-  width: min(90vw, 65dvh, 480px);
+  width: 100%;
 }
 
 .mode {

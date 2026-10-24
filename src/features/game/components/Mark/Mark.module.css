@@ -1,0 +1,44 @@
+.mark {
+  width: 70%;
+  height: 70%;
+  overflow: visible;
+}
+
+.x {
+  color: var(--color-player-x);
+  filter: drop-shadow(0 0 8px rgb(255 92 138 / 0.5));
+}
+
+.o {
+  color: var(--color-player-o);
+  filter: drop-shadow(0 0 8px rgb(61 220 255 / 0.5));
+}
+
+.stroke {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 12;
+  stroke-linecap: round;
+  /* Draw-in animation: dash covers the whole (normalized) path, then slides into view */
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: draw 250ms ease-out forwards;
+}
+
+/* The second stroke of the X starts after the first */
+.second {
+  animation-delay: 150ms;
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stroke {
+    animation: none;
+    stroke-dashoffset: 0;
+  }
+}

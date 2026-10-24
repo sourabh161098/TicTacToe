@@ -23,8 +23,9 @@ src/
 ├── features/             # Feature modules, each self-contained
 │   └── game/
 │       ├── components/   # Game-specific UI (Board, Square, ...)
-│       ├── hooks/        # Game state and logic hooks
-│       └── utils/        # Pure game helpers (winner detection, ...)
+│       ├── hooks/        # useGame, useGameMode, useScoreboard, useComputerOpponent
+│       ├── state/        # gameReducer: move history, undo, reset
+│       └── utils/        # Pure helpers: board, win/draw, computer strategy, scoreboard storage
 ├── hooks/                # Shared custom hooks
 ├── styles/               # Global styles
 ├── utils/                # Shared helper functions
