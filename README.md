@@ -2,6 +2,8 @@
 
 A Tic Tac Toe game built with React and Vite.
 
+Check Live Here - https://start-tictactoe.netlify.app/
+
 ## Getting started
 
 ```bash
