@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Dark tile matching the app background -->
+  <rect width="64" height="64" rx="14" fill="#0f1115"/>
+
+  <!-- Faint tic-tac-toe grid -->
+  <g stroke="#2c313c" stroke-width="3" stroke-linecap="round">
+    <line x1="23.5" y1="10" x2="23.5" y2="54"/>
+    <line x1="40.5" y1="10" x2="40.5" y2="54"/>
+    <line x1="10" y1="23.5" x2="54" y2="23.5"/>
+    <line x1="10" y1="40.5" x2="54" y2="40.5"/>
+  </g>
+
+  <!-- Large marks so they stay readable at 16px -->
+  <g fill="none" stroke-width="7" stroke-linecap="round">
+    <path d="M10 10 L30 30 M30 10 L10 30" stroke="#ff5c8a"/>
+    <circle cx="44" cy="44" r="10" stroke="#3ddcff"/>
+  </g>
+</svg>
